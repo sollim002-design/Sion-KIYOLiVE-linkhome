@@ -23,6 +23,25 @@ document.querySelector("#shareButton").addEventListener("click", async () => {
   catch { showToast("브라우저 메뉴에서 링크를 공유해 주세요"); }
 });
 
+let lastPetalAt = 0;
+window.addEventListener("pointermove", (event) => {
+  if (event.pointerType === "touch") return;
+  const now = performance.now();
+  if (now - lastPetalAt < 55) return;
+  lastPetalAt = now;
+
+  const petal = document.createElement("span");
+  petal.className = "cursor-petal";
+  petal.textContent = Math.random() > 0.35 ? "✿" : "✧";
+  petal.style.left = `${event.clientX + (Math.random() * 18 - 9)}px`;
+  petal.style.top = `${event.clientY + (Math.random() * 18 - 9)}px`;
+  petal.style.setProperty("--petal-size", `${9 + Math.random() * 9}px`);
+  petal.style.setProperty("--petal-drift", `${Math.random() * 70 - 35}px`);
+  petal.style.setProperty("--petal-spin", `${Math.random() * 240 - 120}deg`);
+  document.body.appendChild(petal);
+  petal.addEventListener("animationend", () => petal.remove(), { once: true });
+});
+
 async function updateLiveStatus() {
   try {
     const response = await fetch(`https://api.chzzk.naver.com/polling/v2/channels/${CHZZK_CHANNEL_ID}/live-status`, { cache: "no-store" });
