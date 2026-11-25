@@ -21,6 +21,8 @@ document.querySelector("#shareButton").addEventListener("click", () => {
   copyText(window.location.href, "프로필 주소를 복사했습니다.");
 });
 
-document.querySelector("#copyEmailButton").addEventListener("click", () => {
-  copyText(email, "문의 이메일을 복사했습니다.");
+document.querySelectorAll("#copyEmailButton, [data-copy-email]").forEach((button) => {
+  button.addEventListener("click", () => {
+    copyText(email, "문의 이메일을 복사했습니다.");
+  });
 });
