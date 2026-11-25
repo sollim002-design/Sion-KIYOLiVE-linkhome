@@ -30,7 +30,7 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
 .section-label, .card-meta { margin: 0; font-family: "Outfit", sans-serif; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .section-label { margin-bottom: 24px; color: var(--blue-deep); font-size: 13px; }
 .hero h1 { margin: 0; font-size: clamp(58px, 6.2vw, 94px); font-weight: 700; line-height: 1.08; letter-spacing: -.065em; }
-.hero h1 span { display: inline-block; margin-top: 8px; font-size: .54em; font-weight: 500; letter-spacing: .02em; }
+.hero h1 span { display: inline-block; margin-top: 8px; font-family: "Noto Sans JP", sans-serif; font-size: .54em; font-weight: 600; letter-spacing: .02em; }
 .role { display: flex; align-items: center; gap: 11px; margin: 30px 0 0; font-size: 17px; font-weight: 700; }
 .role::before { width: 9px; height: 9px; border-radius: 50%; background: var(--red); content: ""; }
 .hero-message { max-width: 600px; margin: 24px 0 0; color: #3f3f3f; font-size: 17px; line-height: 1.9; }
@@ -84,16 +84,18 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
 .card-actions { display: flex; align-items: flex-start; }
 .coming-soon { display: inline-flex; padding: 7px 10px; border-radius: 999px; color: #8d6410; background: rgba(247, 223, 135, .48); font: 600 10px "Outfit", sans-serif; letter-spacing: .12em; }
 
-.site-footer { width: min(1320px, calc(100% - 64px)); margin: 0 auto; padding: 34px 0 26px; }
-.footer-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 28px; }
-.footer-brand { display: flex; align-items: center; gap: 18px; }
-.footer-brand img { width: 66px; }
-.footer-brand > div { display: flex; flex-direction: column; gap: 4px; }
+.site-footer { display: grid; grid-template-columns: 82px minmax(0, 1fr); column-gap: 18px; width: min(1320px, calc(100% - 64px)); margin: 0 auto; padding: 34px 0 26px; }
+.footer-symbol { align-self: start; width: 82px; }
+.footer-content { display: grid; align-content: start; row-gap: 8px; min-width: 0; }
+.footer-top { display: flex; align-items: center; justify-content: space-between; }
+.footer-brand { display: flex; flex-direction: column; gap: 4px; }
 .footer-brand strong { font: 700 18px "Outfit", sans-serif; }
 .site-footer span, .site-footer small { color: var(--muted); font: 500 10px "Outfit", sans-serif; letter-spacing: .08em; }
-.business-info { display: flex; flex-wrap: wrap; gap: 6px 0; padding-top: 18px; border-top: 1px solid var(--line); }
-.business-info span { line-height: 1.55; letter-spacing: .02em; }
-.business-info span + span::before { margin: 0 10px; color: var(--line); content: "·"; }
+.footer-brand strong { color: var(--ink); letter-spacing: 0; }
+.business-info { display: flex; width: 100%; padding-top: 0; }
+.business-info span { flex: 1 1 0; min-width: 0; line-height: 1.55; letter-spacing: .02em; text-align: center; }
+.business-info span:first-child { text-align: left; }
+.business-info span:last-child { text-align: right; }
 .toast { position: fixed; z-index: 30; left: 50%; bottom: 28px; padding: 12px 18px; border-radius: 999px; color: var(--white); background: var(--ink); font-size: 14px; opacity: 0; pointer-events: none; transform: translate(-50%, 10px); transition: opacity 180ms ease, transform 180ms ease; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
@@ -142,11 +144,14 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
   .card-actions { grid-column: 2; flex-direction: row; align-items: center; margin-top: 12px; }
   .contact-email { grid-template-columns: 1fr; }
   .contact-email small { grid-column: 1; grid-row: auto; }
-  .site-footer { padding: 32px 0 24px; }
-  .footer-top { align-items: flex-start; gap: 20px; padding-bottom: 24px; }
-  .footer-brand img { width: 52px; }
-  .business-info { align-items: flex-start; flex-direction: column; gap: 5px; padding-top: 18px; }
-  .business-info span + span::before { display: none; }
+  .site-footer { display: grid; grid-template-columns: 58px minmax(0, 1fr); column-gap: 12px; padding: 32px 0 24px; }
+  .footer-symbol { width: 58px; }
+  .footer-content { row-gap: 8px; }
+  .footer-top { align-items: flex-start; gap: 12px; }
+  .footer-brand strong { font-size: 18px; }
+  .footer-brand span { font-size: 10px; }
+  .business-info { display: flex; align-items: flex-start; flex-direction: column; gap: 5px; padding-top: 0; }
+  .business-info span { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
