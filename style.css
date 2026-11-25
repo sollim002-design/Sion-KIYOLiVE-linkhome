@@ -84,14 +84,16 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
 .card-actions { display: flex; align-items: flex-start; }
 .coming-soon { display: inline-flex; padding: 7px 10px; border-radius: 999px; color: #8d6410; background: rgba(247, 223, 135, .48); font: 600 10px "Outfit", sans-serif; letter-spacing: .12em; }
 
-.site-footer { display: grid; grid-template-columns: 1fr 1.15fr auto; align-items: center; width: min(1320px, calc(100% - 64px)); min-height: 180px; margin: 0 auto; gap: 44px; }
+.site-footer { width: min(1320px, calc(100% - 64px)); margin: 0 auto; padding: 34px 0 26px; }
+.footer-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 28px; }
 .footer-brand { display: flex; align-items: center; gap: 18px; }
 .footer-brand img { width: 66px; }
-.footer-brand > div, .business-info { display: flex; flex-direction: column; gap: 4px; }
+.footer-brand > div { display: flex; flex-direction: column; gap: 4px; }
 .footer-brand strong { font: 700 18px "Outfit", sans-serif; }
 .site-footer span, .site-footer small { color: var(--muted); font: 500 10px "Outfit", sans-serif; letter-spacing: .08em; }
-.business-info { padding-left: 28px; border-left: 1px solid var(--line); }
+.business-info { display: flex; flex-wrap: wrap; gap: 6px 0; padding-top: 18px; border-top: 1px solid var(--line); }
 .business-info span { line-height: 1.55; letter-spacing: .02em; }
+.business-info span + span::before { margin: 0 10px; color: var(--line); content: "·"; }
 .toast { position: fixed; z-index: 30; left: 50%; bottom: 28px; padding: 12px 18px; border-radius: 999px; color: var(--white); background: var(--ink); font-size: 14px; opacity: 0; pointer-events: none; transform: translate(-50%, 10px); transition: opacity 180ms ease, transform 180ms ease; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
@@ -106,8 +108,7 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
   .official-heading .section-label { margin-bottom: 0; }
   .section, .contact { grid-template-columns: 1fr; gap: 56px; padding: 90px 0; }
   .contact { padding-top: 76px; padding-bottom: 76px; }
-  .site-footer { grid-template-columns: 1fr 1fr; gap: 28px 40px; padding: 30px 0; }
-  .site-footer small { grid-column: 1 / -1; }
+  .site-footer { padding: 30px 0 24px; }
 }
 
 @media (max-width: 620px) {
@@ -141,10 +142,11 @@ main { width: min(1320px, calc(100% - 64px)); margin: 0 auto; }
   .card-actions { grid-column: 2; flex-direction: row; align-items: center; margin-top: 12px; }
   .contact-email { grid-template-columns: 1fr; }
   .contact-email small { grid-column: 1; grid-row: auto; }
-  .site-footer { grid-template-columns: 1fr; min-height: 0; padding: 36px 0; }
+  .site-footer { padding: 32px 0 24px; }
+  .footer-top { align-items: flex-start; gap: 20px; padding-bottom: 24px; }
   .footer-brand img { width: 52px; }
-  .business-info { padding: 20px 0 0; border-top: 1px solid var(--line); border-left: 0; }
-  .site-footer small { grid-column: 1; }
+  .business-info { align-items: flex-start; flex-direction: column; gap: 5px; padding-top: 18px; }
+  .business-info span + span::before { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
