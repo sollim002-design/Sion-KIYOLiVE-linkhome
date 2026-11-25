@@ -3,59 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f3a9c8" />
-    <meta name="description" content="KIYOLiVE 대표 하나사키 시온의 공식 비즈니스 프로필입니다." />
-    <title>Hanasaki Sion — KIYOLiVE</title>
+    <meta name="theme-color" content="#f7f7f4" />
+    <meta name="description" content="KIYOLiVE 대표 하나사키 시온(花咲しおん)의 공식 비즈니스 프로필입니다." />
+    <title>하나사키 시온 · KIYOLiVE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <main class="site">
-      <header class="masthead">
-        <a class="wordmark" href="./index.html" aria-label="KIYOLiVE 홈">KIYO<span>LiVE</span></a>
-        <button class="share" id="shareButton" type="button"><span>share profile</span><b>↗</b></button>
+    <main>
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="KIYOLiVE 프로필 홈">
+          <img src="./assets/kiyolive-wordmark.png" alt="KIYOLiVE" />
+        </a>
+        <button class="share-button" id="shareButton" type="button">프로필 공유</button>
       </header>
 
-      <div class="layout">
-        <section class="intro">
-          <p class="eyebrow">KIYOLiVE / REPRESENTATIVE</p>
-          <div class="identity-mark" aria-hidden="true">
-            <span>K</span>
-            <i>01</i>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="section-label">KIYOLiVE REPRESENTATIVE</p>
+          <h1 id="hero-title">하나사키 시온<br /><span lang="ja">花咲しおん</span></h1>
+          <p class="role">KIYOLiVE 대표</p>
+          <p class="hero-message">
+            창작자의 시선으로 아티스트의 가능성을 발견하고,<br class="desktop-break" />
+            각자의 음악과 무대가 오래 이어질 수 있는 기반을 만들어갑니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">협업 문의</a>
+            <button class="button button-secondary" id="copyEmailButton" type="button">이메일 복사</button>
           </div>
-          <h1>Hanasaki<br /><em>Sion</em></h1>
-          <p class="intro-copy">KIYOLiVE 대표 하나사키 시온입니다.</p>
-          <p class="intro-note">브랜드와 사람, 아이디어를 연결하며 새로운 가능성을 만들어갑니다.</p>
-        </section>
+        </div>
 
-        <section class="profile-panel" aria-label="KIYOLiVE 대표 프로필">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">BUSINESS PROFILE</p>
-              <h2>Official Information</h2>
+        <div class="hero-visual" aria-label="하나사키 시온 캐릭터 이미지">
+          <span class="color-bar color-bar-yellow" aria-hidden="true"></span>
+          <span class="color-bar color-bar-blue" aria-hidden="true"></span>
+          <img class="hero-symbol" src="./assets/kiyolive-symbol.png" alt="" aria-hidden="true" />
+          <img class="hero-character" src="./assets/sion-hero.png" alt="하나사키 시온" />
+          <span class="hero-index" aria-hidden="true">01 / KIYOLiVE</span>
+        </div>
+      </section>
+
+      <section class="about section" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-label">ABOUT KIYOLiVE</p>
+          <h2 id="about-title">아티스트의 음악과<br />무대를 함께 만듭니다.</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            KIYOLiVE는 방송과 음악을 함께 꿈꾸는 버추얼 아티스트와 인디 아티스트를 위한
+            엔터테인먼트입니다. 아티스트가 자신만의 음악을 만들고 표현하는 데 집중할 수 있도록
+            음악적 기반과 제작 환경, 필요한 지원을 함께 만들어갑니다.
+          </p>
+          <p>
+            각자의 개성과 방향을 존중하며, 아티스트가 자신만의 무대를 오래 이어갈 수 있는
+            지속 가능한 창작 환경을 만드는 것을 목표로 합니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-intro">
+          <p class="section-label">WORK WITH US</p>
+          <h2 id="contact-title">함께 새로운 무대를<br />만들고 싶다면</h2>
+          <p>
+            KIYOLiVE는 아티스트, 크리에이터, 음악 제작자 및 다양한 분야의 파트너와 함께할
+            제안을 기다립니다.
+          </p>
+        </div>
+
+        <div class="inquiry-list">
+          <article class="inquiry-card">
+            <div class="card-number">01</div>
+            <div class="card-copy">
+              <p class="card-meta">FOR ARTISTS &amp; CREATORS</p>
+              <h3>아티스트·크리에이터 문의</h3>
+              <p>소속, 활동 지원, 음악 및 콘텐츠 협업을 희망하는 창작자를 위한 문의입니다.</p>
             </div>
-            <span class="status"><i></i> official</span>
-          </div>
+            <div class="card-actions">
+              <span class="coming-soon">FORM · COMING SOON</span>
+              <a href="mailto:kiyolive26@gmail.com?subject=%5B아티스트·크리에이터%20문의%5D%20">이메일 문의</a>
+            </div>
+          </article>
 
-          <dl class="profile-list">
-            <div><dt>Company</dt><dd>KIYOLiVE</dd></div>
-            <div><dt>Position</dt><dd>Representative</dd></div>
-            <div><dt>Name</dt><dd>Hanasaki Sion</dd></div>
-          </dl>
+          <article class="inquiry-card">
+            <div class="card-number">02</div>
+            <div class="card-copy">
+              <p class="card-meta">FOR PARTNERS</p>
+              <h3>제작·비즈니스 파트너 문의</h3>
+              <p>음악, 영상, 일러스트, 행사, 브랜드 제휴 등 함께할 파트너를 위한 문의입니다.</p>
+            </div>
+            <div class="card-actions">
+              <span class="coming-soon">FORM · COMING SOON</span>
+              <a href="mailto:kiyolive26@gmail.com?subject=%5B제작·비즈니스%20파트너%20문의%5D%20">이메일 문의</a>
+            </div>
+          </article>
+        </div>
 
-          <div class="business-links" aria-label="추가 예정인 비즈니스 링크">
-            <div class="link-placeholder"><span>01</span><strong>KIYOLiVE 공식 홈페이지</strong><small>준비 중</small></div>
-            <div class="link-placeholder"><span>02</span><strong>업무 문의</strong><small>준비 중</small></div>
-            <div class="link-placeholder"><span>03</span><strong>회사 소개서</strong><small>준비 중</small></div>
-          </div>
-        </section>
-      </div>
+        <div class="email-line">
+          <span>CONTACT</span>
+          <a href="mailto:kiyolive26@gmail.com">kiyolive26@gmail.com</a>
+        </div>
+      </section>
 
-      <footer class="footer"><span>KIYOLiVE</span><span>© 2026 Hanasaki Sion</span></footer>
+      <section class="channels section" aria-labelledby="channels-title">
+        <div class="section-heading compact-heading">
+          <p class="section-label">OFFICIAL CHANNELS</p>
+          <h2 id="channels-title">곧 만나요.</h2>
+        </div>
+        <div class="channel-list" aria-label="준비 중인 KIYOLiVE 공식 채널">
+          <div class="channel-item"><span>Website</span><strong>KIYOLiVE 공식 홈페이지</strong><em>COMING SOON</em></div>
+          <div class="channel-item"><span>Social</span><strong>X · Twitter</strong><em>COMING SOON</em></div>
+          <div class="channel-item"><span>Video</span><strong>YouTube</strong><em>COMING SOON</em></div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <img src="./assets/kiyolive-symbol.png" alt="KIYOLiVE 심볼" />
+      <div>
+        <strong>KIYOLiVE</strong>
+        <span>ENTERTAINMENT FOR VIRTUAL &amp; INDIE ARTISTS</span>
+      </div>
+      <small>© 2026 KIYOLiVE</small>
+    </footer>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="./script.js"></script>
   </body>
